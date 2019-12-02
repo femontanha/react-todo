@@ -61,13 +61,7 @@ function App() {
 
   const completeTodo = (index, isCompleted) => {
     const newTodos = [...todos];
-
-    if (isCompleted) {
-      newTodos[index].isCompleted = false;
-    } else {
-      newTodos[index].isCompleted = true;
-    }
-
+    newTodos[index].isCompleted = !isCompleted;
     setTodos(newTodos);
   }
 
